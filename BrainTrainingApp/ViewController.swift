@@ -16,5 +16,9 @@ class ViewController: UIViewController {
     }
 
 
+    func numberDrawn(_ image: UIImage) {
+        
+    }
+
 }
 
