@@ -18,9 +18,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
 
     }
 
@@ -42,7 +39,36 @@ class ViewController: UIViewController {
                     cell.textLabel?.text = "\(question.text) = ?"
                 }
             }
-
+    
+    func createQuestion() -> Question {
+        var question = ""
+        var correctAnswer = 0
+        
+        while true {
+            let firstNumber = Int.random(in: 0...9)
+            let secondNumber = Int.random(in: 0...9)
+            
+            if Bool.random() == true {
+                let result = firstNumber + secondNumber
+                if result < 10 {
+                    question = "\(firstNumber) + \(secondNumber)"
+                    correctAnswer = result
+                    break
+                    
+                }
+            } else {
+                let result = firstNumber - secondNumber
+                if result >= 0 {
+                    question = "\(firstNumber) - \(secondNumber)"
+                    correctAnswer = result
+                    break
+                }
+            }
+            
+        }
+        
+        return Question(text: question, correctAnswer: correctAnswer, actual: nil)
+    }
 
 }
 
