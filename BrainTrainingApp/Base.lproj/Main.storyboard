@@ -64,7 +64,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="RIu-4t-j8h"/>
                     <connections>
-                        <outlet property="imageView" destination="TOB-7k-pA2" id="16b-BN-TpO"/>
+                        <outlet property="drawView" destination="TOB-7k-pA2" id="ZXQ-YW-rX0"/>
                         <outlet property="tableView" destination="diG-5i-QuS" id="3G4-7I-ow0"/>
                     </connections>
                 </viewController>

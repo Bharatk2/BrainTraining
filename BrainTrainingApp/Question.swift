@@ -11,7 +11,7 @@ import Foundation
 struct Question {
     
     var text: String
-    var correctAnswer: Int
+    var correct: Int
     var actual: Int?
 }
 
